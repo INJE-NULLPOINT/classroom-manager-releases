@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>INJE-ACRM 설치</title>
+    <meta name="description" content="INJE-ACRM 강의실 관리 프로그램 설치 안내 · AI소프트웨어학과 학술 동아리 NULLPOINT" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <style>
+      :root {
+        --bg: #fafafa;
+        --panel: #ffffff;
+        --line: #e5e5e5;
+        --text: #0a0a0a;
+        --muted: #6b6b6b;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--text);
+        font-family: "Pretendard Variable", Pretendard, "Malgun Gothic", "Apple SD Gothic Neo", system-ui, sans-serif;
+        font-size: 15px;
+        -webkit-font-smoothing: antialiased;
+      }
+      header {
+        background: #0a0a0a;
+        color: #fff;
+        padding: 28px 24px 56px;
+      }
+      .wrap {
+        max-width: 760px;
+        margin: 0 auto;
+      }
+      header img {
+        height: 20px;
+        display: block;
+      }
+      h1 {
+        margin: 48px 0 0;
+        font-size: 44px;
+        letter-spacing: -0.02em;
+        line-height: 1.1;
+      }
+      header p {
+        margin: 10px 0 0;
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 17px;
+      }
+      main {
+        padding: 32px 24px 48px;
+      }
+      .card {
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        padding: 22px 22px 20px;
+        margin-bottom: 16px;
+      }
+      .card h2 {
+        margin: 0;
+        font-size: 18px;
+        letter-spacing: -0.01em;
+      }
+      .card p {
+        margin: 6px 0 14px;
+        color: var(--muted);
+        line-height: 1.6;
+      }
+      .cmd {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        background: #0a0a0a;
+        color: #fff;
+        border-radius: 8px;
+        padding: 10px 10px 10px 16px;
+      }
+      .cmd code {
+        flex: 1;
+        min-width: 0;
+        overflow-x: auto;
+        white-space: nowrap;
+        font-family: ui-monospace, "Cascadia Code", Consolas, monospace;
+        font-size: 14px;
+      }
+      .cmd button {
+        flex: none;
+        border: 0;
+        border-radius: 6px;
+        background: #fff;
+        color: #0a0a0a;
+        font: inherit;
+        font-weight: 600;
+        padding: 6px 12px;
+        cursor: pointer;
+      }
+      .cmd button:active {
+        transform: scale(0.97);
+      }
+      ol {
+        margin: 0;
+        padding-left: 20px;
+        color: var(--muted);
+        line-height: 1.8;
+      }
+      footer {
+        border-top: 1px solid var(--line);
+        padding: 20px 24px 32px;
+        color: var(--muted);
+        font-size: 13px;
+        line-height: 1.7;
+      }
+      footer a {
+        color: var(--text);
+      }
+      @media (max-width: 560px) {
+        h1 {
+          font-size: 34px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="wrap">
+        <img src="/nullpoint-wordmark.svg" alt="NULLPOINT" />
+        <h1>INJE-ACRM</h1>
+        <p>강의실 PC를 한 화면에서 · 설치 안내</p>
+      </div>
+    </header>
+
+    <main class="wrap">
+      <section class="card">
+        <h2>학생 PC</h2>
+        <p>학생 PC마다 한 번 실행해요. 같은 네트워크에서 강사 콘솔이 켜져 있으면 자동으로 등록돼요.</p>
+        <div class="cmd">
+          <code>irm https://acrm.isnull.kr/agent | iex</code>
+          <button type="button" data-copy="irm https://acrm.isnull.kr/agent | iex">복사</button>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>강사 PC</h2>
+        <p>설치가 끝나면 콘솔이 열리고 바탕화면에 &lsquo;강의실 관리 콘솔&rsquo; 바로가기가 생겨요.</p>
+        <div class="cmd">
+          <code>irm https://acrm.isnull.kr/console | iex</code>
+          <button type="button" data-copy="irm https://acrm.isnull.kr/console | iex">복사</button>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>실행 방법</h2>
+        <ol>
+          <li>시작 메뉴에서 &lsquo;PowerShell&rsquo;을 찾아 <b>관리자 권한으로 실행</b>해요(아니면 확인 창이 한 번 더 떠요).</li>
+          <li>위 명령을 붙여 넣고 Enter를 눌러요.</li>
+          <li>항상 최신 버전을 설치하고, 이미 설치된 PC는 최신 버전으로 덮어써요. 설치 파일은 서명을 확인한 뒤에만 실행해요.</li>
+        </ol>
+      </section>
+    </main>
+
+    <footer>
+      <div class="wrap">
+        INJE-ACRM 개선 및 버그 문의 · <a href="mailto:nullpoint@isnull.kr">nullpoint@isnull.kr</a> · AI소프트웨어학과 학술 동아리 NULLPOINT
+      </div>
+    </footer>
+
+    <script>
+      for (const b of document.querySelectorAll("button[data-copy]")) {
+        b.addEventListener("click", async () => {
+          try {
+            await navigator.clipboard.writeText(b.dataset.copy);
+            b.textContent = "복사됨";
+            setTimeout(() => (b.textContent = "복사"), 1500);
+          } catch {
+            b.textContent = "직접 복사해 주세요";
+          }
+        });
+      }
+    </script>
+  </body>
+</html>
